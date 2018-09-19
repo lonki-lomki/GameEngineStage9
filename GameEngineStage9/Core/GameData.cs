@@ -1,5 +1,7 @@
 ﻿using GameEngineStage9.Utils;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace GameEngineStage9.Core
 {
@@ -18,13 +20,28 @@ namespace GameEngineStage9.Core
 
         private static GameData instance;
 
-        //public PhysWorld world;
+        public PhysWorld world;
 
         public Logger log;
+
+        public ResourceManager rm;
+
+        public Image backgroundImage;
+
+        public HashSet<Keys> PressedKeys = new HashSet<Keys>();
+
+        public Bitmap worldImage;   // Буфер для отображения мира (общая карта, из которой камера будет отображать некоторую часть)
+
 
         public Rectangle clientRectangle;
 
         /////////////////////////////////////////////////////////
+
+        public Scene curScene = null;
+
+        public bool sceneChange = false;
+
+        public Camera camera;
 
 
         // Запретить new

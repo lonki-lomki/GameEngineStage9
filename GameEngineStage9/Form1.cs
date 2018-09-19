@@ -1,6 +1,7 @@
 ﻿using GameEngineStage9.Core;
 using GameEngineStage9.Utils;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GameEngineStage9
@@ -142,16 +143,16 @@ namespace GameEngineStage9
             //gd.backgroundImage = gd.rm.GetImage("background");
 
             // Создание и настройка камеры
-            //gd.camera = new Camera(new Rectangle(CONFIG.START_X, CONFIG.START_Y, ClientRectangle.Width - CONFIG.START_X * 2, ClientRectangle.Height - CONFIG.PANEL_HEIGHT - CONFIG.START_X * 2));
+            gd.camera = new Camera(new Rectangle(CONFIG.START_X, CONFIG.START_Y, ClientRectangle.Width - CONFIG.START_X * 2, ClientRectangle.Height - CONFIG.PANEL_HEIGHT - CONFIG.START_X * 2));
 
             // Создать стартовую сцену игры
-            //GameScene gs = new GameScene(GameData.GameState.Level, gd);
-            //MainMenuScene scene = new MainMenuScene(GameData.GameState.MainMenu, gd);
-            //gd.curScene = gs;
+            GameScene gs = new GameScene(GameData.GameState.Level, gd);
+            MainMenuScene scene = new MainMenuScene(GameData.GameState.MainMenu, gd);
+            gd.curScene = gs;
 
-            //gd.curScene.Init();
+            gd.curScene.Init();
 
-            //gd.sceneChange = true;
+            gd.sceneChange = true;
 
         }
 
