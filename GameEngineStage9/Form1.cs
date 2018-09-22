@@ -1,4 +1,5 @@
 ﻿using GameEngineStage9.Core;
+using GameEngineStage9.Scenes;
 using GameEngineStage9.Utils;
 using System;
 using System.Drawing;
@@ -147,7 +148,7 @@ namespace GameEngineStage9
 
             // Создать стартовую сцену игры
             GameScene gs = new GameScene(GameData.GameState.Level, gd);
-            MainMenuScene scene = new MainMenuScene(GameData.GameState.MainMenu, gd);
+            //MainMenuScene scene = new MainMenuScene(GameData.GameState.MainMenu, gd);
             gd.curScene = gs;
 
             gd.curScene.Init();

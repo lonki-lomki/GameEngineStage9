@@ -59,6 +59,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\GameScene.cs" />
+    <Compile Include="Scenes\MainMenuScene.cs" />
     <Compile Include="Utils\Collider.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\Polygon.cs" />
@@ -88,7 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Scenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
