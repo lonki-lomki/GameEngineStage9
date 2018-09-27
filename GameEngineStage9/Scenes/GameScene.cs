@@ -9,8 +9,6 @@ namespace GameEngineStage9.Scenes
     /// </summary>
     public class GameScene : Scene
     {
-        // Переменная для отслеживания состояния падения танков
-        //private bool isFallingTanks = false;
 
         public GameScene(GameData.GameState ID, GameData gd) : base(ID, gd)
         {
@@ -32,6 +30,8 @@ namespace GameEngineStage9.Scenes
 
             // Загрузить ресурсы, необходимые для данной сцены
             gd.rm.Clear();
+
+
 
             //gd.worldImage = new Bitmap(CONFIG.WIND_WIDTH, CONFIG.WIND_HEIGHT, PixelFormat.Format32bppPArgb);
             //gd.worldImage = new Bitmap(width, height, PixelFormat.Format32bppArgb);

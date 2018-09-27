@@ -51,6 +51,7 @@
     <Compile Include="Core\PhysWorld.cs" />
     <Compile Include="Core\ResourceManager.cs" />
     <Compile Include="Core\Scene.cs" />
+    <Compile Include="Entities\TiledMapObject.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,7 @@
     <Compile Include="Utils\Collider.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\Polygon.cs" />
+    <Compile Include="Utils\SpriteSheet.cs" />
     <Compile Include="Utils\TiledParser.cs" />
     <Compile Include="Utils\Vector.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -88,8 +90,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,8 @@ namespace GameEngineStage9.Core
 
         public Image backgroundImage;
 
+        public SpriteSheet ss;
+
         public HashSet<Keys> PressedKeys = new HashSet<Keys>();
 
         public Bitmap worldImage;   // Буфер для отображения мира (общая карта, из которой камера будет отображать некоторую часть)

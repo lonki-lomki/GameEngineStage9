@@ -55,7 +55,7 @@ namespace GameEngineStage9
 
             // Вывести сообщение в заголовке окна
             this.Text = old_title + " : " + fps + " FPS"; // + (string)luaVersion;
-            /*
+            
             // Проверить флаг смены сцены
             if (gd.sceneChange == true)
             {
@@ -89,7 +89,7 @@ namespace GameEngineStage9
                     gd.world.objects.RemoveAt(i);
                 }
             }
-            */
+            
             saveTickCount = tickCount;
 
             Invalidate(false);
@@ -157,24 +157,64 @@ namespace GameEngineStage9
 
         }
 
+        ///////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Обработка событий перерисовки содержимого окна
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        ///////////////////////////////////////////////////////////////////////
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = e.Graphics;
 
+            // Вывести фоновое изображение, если оно есть
+            if (gd.backgroundImage != null)
+            {
+                //g.DrawImage(gd.backgroundImage, 0.0f, 0.0f);
+            }
+
+            // Вызвать метод отображения текущей сцены
+            gd.curScene.Render(g);
         }
 
+        ///////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Обработка нажатых клавиш
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        ///////////////////////////////////////////////////////////////////////
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-
+            // Вызвать обработчик нажатий клавиш текущей сцены
+            gd.curScene.KeyDown(sender, e);
         }
 
+        ///////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Обработка отпущенных клавиш
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        ///////////////////////////////////////////////////////////////////////
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-
+            // Вызвать обработчик отпусканий клавиш текущей сцены
+            gd.curScene.KeyUp(sender, e);
         }
 
+        ///////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Обработка событий нажатия клавиши мыши
+        /// </summary>
+        /// <param name="sender">Источник события</param>
+        /// <param name="e">Параметры события</param>
+        ///////////////////////////////////////////////////////////////////////
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-
+            // Вызвать обработчик нажатий клавиш текущей сцены
+            gd.curScene.MouseDown(sender, e);
         }
     }
 }

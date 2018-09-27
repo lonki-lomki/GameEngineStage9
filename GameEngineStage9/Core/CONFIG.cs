@@ -15,8 +15,8 @@
         public static readonly int START_X = 2;
         public static readonly int START_Y = PANEL_HEIGHT + 2;
 
-        //public static readonly int VIEWPORT_WIDTH = 1010;
-        //public static readonly int VIEWPORT_HEIGHT = 534;
+        public static readonly int VIEWPORT_WIDTH = 800;
+        public static readonly int VIEWPORT_HEIGHT = 512;
 
         public static readonly float PHYS_GRAVITY = 500.0f; //1000.0f;//1.1f; //5.0f; // Гравитация для физ. движка
 
